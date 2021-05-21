@@ -1,14 +1,92 @@
 <%-include('header')-%>
 
-<div class="text-center center-div mt-5" id="login">
-    <div class="container w-25 border py-5 mt-5">
-        <h1 class="mt-4">Dashboard</h1>
-        <p class="lead mb-3">Welcome <%= name %></p>
-        <a href="/users/logout" class="btn btn-secondary">Logout</a>
 
+
+  <main>
+
+    <div class="text-center center-div mt-5 m-4" id="login">
+        <div class="container w-25 border mt-5">
+            <p class="lead mb-3">Welcome <%= name %></p>
+            <a href="/users/logout" class="btn btn-secondary">Logout</a>
+    
+        </div>
     </div>
-</div>
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <i class="fas fa-id-card fa-10x"></i>
+          <h2>Professional </h2>
+          <p>We make sure that our employees have training 
+            and certificates for the profession in which they offer service.</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="fas fa-balance-scale fa-10x"></i>
+          <h2>Pricing</h2>
+          <p>Prices adjusted to the market. You will not find
+             expensive pricing with us, we guarantee the best price. </p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="far fa-smile fa-10x"></i>
+
+          <h2>Service</h2>
+          Our customers are satisfied. If you have experienced bad 
+          service, please report it to us and rate the service.
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
 
 
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5 pd-6">
+          <i class="fas fa-user fa-10x"></i>
+          <i class="fas fa-user-friends fa-10x"></i>
+        </div>
+        <div class="col-md-7 mt-2">
+          <h2 class="featurette-heading">User tell about us. <span class="text-muted">'James Shlock'</span>
+          </h2>
+          <p class="lead">I use the service regularly.
+            The employees are professional and the customer service is excellent,
+            highly recommend,
+            James Shlock. </p>
+        </div>
+      
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5 pd-6">
+          <i class="fas fa-users fa-10x"></i>
+        </div>
+        <div class="col-md-7 mt-2">
+          <h2 class="featurette-heading">Companies that work with us tell about us . <span class="text-muted">'SCE-Company'</span>
+          </h2>
+          <p class="lead">The company uses the service regularly, the professionalism of the employees and 
+            the prices just prove the quality of the service. </p>
+        </div>
+      
+      </div>
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+
+
+
+  </main>
 
 <%-include('footer')-%>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="jimjan.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="544.98655"
+     inkscape:cy="462.57537"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:0.93061224;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 372.04688 186.18164 A 170 170 0 0 0 202.04688 356.18164 A 170 170 0 0 0 372.04688 526.18164 A 170 170 0 0 1 542.04688 696.18164 A 170 170 0 0 1 386.54102 865.45703 A 340 340 0 0 0 712.04688 526.18164 A 340 340 0 0 0 372.04688 186.18164 z M 372.04688 311.18164 A 45 45 0 0 1 417.04688 356.18164 A 45 45 0 0 1 372.04688 401.18164 A 45 45 0 0 1 327.04688 356.18164 A 45 45 0 0 1 372.04688 311.18164 z "
+       id="circle3362" />
+    <circle
+       r="45"
+       cy="696.18109"
+       cx="372.04724"
+       id="circle3349"
+       style="opacity:0.93061224;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="opacity:0.93061224;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 372.04688,166.18164 c -198.82251,0 -360.000005,161.17749 -360.000005,360 0,198.82251 161.177495,360 360.000005,360 198.82251,0 360,-161.17749 360,-360 0,-198.82251 -161.17749,-360 -360,-360 z m 0,20 c 187.77681,0 340,152.22319 340,340 0,187.77681 -152.22319,340 -340,340 -118.41362,0 -222.68874,-60.53411 -283.567901,-152.34487 C 52.817764,660.05674 32.046875,595.54484 32.046875,526.18164 c 0,-187.77682 152.223185,-340 340.000005,-340 z"
+       id="circle3357"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssssss" />
+  </g>
+</svg>
