@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="/style.css">
+
+	<style>
+		*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: url(bg_img.jpg) no-repeat;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: sans-serif;
+}
+.container{
+	position: relative;
+	margin-top: 100px;
+	width: 450px;
+	height: auto;
+	background: #ffffff;
+	border-radius: 5px;
+}
+.label{
+	padding: 20px 130px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #130f40;
+}
+.login_form{
+	padding: 20px 40px;
+}
+.login_form .font{
+	font-size: 18px;
+	color: #130f40;
+	margin: 5px 0;
+}
+.login_form input{
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+	border: 1px solid silver;
+}
+.login_form .font2{
+	margin-top: 30px;
+}
+.login_form button{
+	margin: 45px 0 30px 0;
+	height: 45px;
+	width: 365px;
+	font-size: 20px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #c53434;
+	border-radius: 3px;
+	border: 1px solid #3949AB;
+	transition: .5s;
+}
+.login_form button:hover{
+	background: #c53434;
+}
+.login_form #email_error,
+.login_form #pass_error{
+	margin-top: 5px;
+	width: 345px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container mt-4">
+		<i class="fas fa-toolbox fa-10x ml-5"></i>
+		<h1 class="label pl-5">HR Login</h1>
+		<form class="login_form" action="/hrcontrol" method="post" name="form" onsubmit="return validated()">
+			<div class="font">Email or Phone</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Please fill up your Email or Phone</div>
+			<div class="font font2">Password</div>
+			<input type="password" name="password">
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Login</button>
+			<a href="/" class="btn btn-secondary btn-block m-2 p-6">Back</a>
+
+		</form>
+		
+
+	</div>	
+	<script >
+	//Validtion Code For Inputs
+
+	var email = document.forms['form']['email'];
+var password = document.forms['form']['password'];
+
+var email_error = document.getElementById('email_error');
+var pass_error = document.getElementById('pass_error');
+
+email.addEventListener('textInput', email_Verify);
+password.addEventListener('textInput', pass_Verify);
+
+function validated(){
+	if (email.value != "admin") {
+		email.style.border = "1px solid red";
+		email_error.style.display = "block";
+		email.focus();
+		return false;
+	}
+	if (password.value != "123456") {
+		password.style.border = "1px solid red";
+		pass_error.style.display = "block";
+		password.focus();
+		return false;
+	}
+
+}
+function email_Verify(){
+	if (email.value =="admin") {
+		email.style.border = "1px solid silver";
+		email_error.style.display = "none";
+		return true;
+	}
+}
+function pass_Verify(){
+	if (password.value.length >= 5 && password.value =="123456") {
+		password.style.border = "1px solid silver";
+		pass_error.style.display = "none";
+		return true;
+	}
+}
+
+
+	</script>
+
+</body>
+</html>
