@@ -15,7 +15,17 @@ res.render('dashboard',{
 router.get('/hrlogin1', (req, res) =>{res.render('./hrlogin')} );
 
 //crud
-router.get('/hrcontrol', (req, res) =>{res.render('./crud')} );
+router.get('/hrcontrol', (req, res) =>{res.render('./crud')
+} );
+
+//booking
+router.get('/booking', (req, res) =>{res.render('./booking')
+} );
+
+
+//calendar
+router.get('/calendar', (req, res) =>{res.render('./calendar')
+} );
 
 
 module.exports = router

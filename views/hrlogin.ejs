@@ -81,12 +81,6 @@ body{
 	border: 1px solid #EF9A9A;
 	display: none;
 }
-
-
-
-
-
-
 	</style>
 </head>
 <body>
@@ -109,16 +103,12 @@ body{
 	</div>	
 	<script >
 	//Validtion Code For Inputs
-
 	var email = document.forms['form']['email'];
 var password = document.forms['form']['password'];
-
 var email_error = document.getElementById('email_error');
 var pass_error = document.getElementById('pass_error');
-
 email.addEventListener('textInput', email_Verify);
 password.addEventListener('textInput', pass_Verify);
-
 function validated(){
 	if (email.value != "admin") {
 		email.style.border = "1px solid red";
@@ -132,7 +122,6 @@ function validated(){
 		password.focus();
 		return false;
 	}
-
 }
 function email_Verify(){
 	if (email.value =="admin") {
@@ -148,8 +137,6 @@ function pass_Verify(){
 		return true;
 	}
 }
-
-
 	</script>
 
 </body>
