@@ -27,6 +27,10 @@ router.get('/booking', (req, res) =>{res.render('./booking')
 router.get('/calendar', (req, res) =>{res.render('./calendar')
 } );
 
+//calendar
+router.get('/history', (req, res) =>{res.render('./history')
+} );
+
 
 module.exports = router
 
