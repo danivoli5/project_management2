@@ -27,8 +27,17 @@ router.get('/booking', (req, res) =>{res.render('./booking')
 router.get('/calendar', (req, res) =>{res.render('./calendar')
 } );
 
-//calendar
+//history
 router.get('/history', (req, res) =>{res.render('./history')
+} );
+
+//rating
+router.get('/rating', (req, res) =>{res.render('./rating')
+} );
+
+
+//rating system
+router.get('/ratingsystem', (req, res) =>{res.render('./ratingsystem')
 } );
 
 
