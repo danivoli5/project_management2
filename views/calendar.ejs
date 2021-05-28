@@ -129,7 +129,7 @@
 			<div id="calendar-dates">
 			</div>
 		</div>
-		<div class="container-class">
+		<div class="container-class" method="POST">
 			<div class="container-title">
 				<span>Appointment</span>
 			</div>
@@ -138,13 +138,14 @@
 				<span id="appointment-date"></span>
 				<input type="hidden" id="date-id" value=""/>
 				<br>
-				<label for="appointment-text">Subject:</label>
-				<textarea id="appointment-text" rows="5"></textarea>
+				<form action="/history" method="GET">
+                    
+                    <input type="text" id="name" name="name" placeholder="Subject:" />
+    />
+                    <input type="submit" onclick="handleSubmit()"/>
+                </form>
 			</div>
-			<div>
-				<button id="save-appointment">Insert</button>
-				<button id="delete-appointment">Delete</button>
-			</div>
+	
 		</div>
 
 
@@ -162,6 +163,21 @@
                         deleteClick();
                     }
 
+
+
+
+                    //CodeEdit
+
+                    function handleSubmit(){
+                        const name = document.getElementById("appointment-text").value;
+
+                        sessionStorage.setItem("RESULT",name);
+                        window.document.location = './history'
+                        
+
+
+                    }
+             
                     /**
                      * Controls the two buttons according to the selectedDay data
                      * @param {*} selectedDay 
@@ -190,6 +206,14 @@
                             let appointmentText = document.createAttribute("data");
                             appointmentText.value = document.getElementById("appointment-text").value;
                             selectedDay.setAttributeNode(appointmentText);
+                            
+                            //CodeEdit
+                            localStorage.getItem("appointment-text")
+
+                
+
+
+
 
                             controlButtons(selectedDay);
                         });
