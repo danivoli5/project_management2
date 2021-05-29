@@ -40,6 +40,10 @@ router.get('/rating', (req, res) =>{res.render('./rating')
 router.get('/ratingsystem', (req, res) =>{res.render('./ratingsystem')
 } );
 
+//contactus
+router.get('/contactus', (req, res) =>{res.render('./contactus')
+} );
+
 
 module.exports = router
 
