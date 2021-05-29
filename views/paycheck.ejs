@@ -1,0 +1,537 @@
+<html>
+<head>
+    <style>
+        body{
+    background-image: url(img/Ural_Mountains_Winter_woods_\(32035729862\).jpg);
+    background-size: contain;
+    
+}
+h1 {
+    color: Black;
+    background-color: #1b81b1;
+    border: black solid 2px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2f 1fr;
+    justify-content: center;   
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: fantasy;
+}
+button{
+    outline: none;
+}
+.bigText {
+    font-size: 20px;
+}
+.container {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.bottom {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/*------Top Side------*/
+.input-box-setter {
+    background: white;
+    border: black solid 2px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    height: 120px;
+}
+.input-box {
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    font-family: fantasy;
+}
+.input-box input::placeholder{
+    font-size: 25px;
+    color: black;
+}
+#paycheck-amount{
+    background-color: rgba(82, 118, 155, 0.5);
+    font-family: fantasy;
+}
+#hours-day-amount{
+    background-color: rgba(82, 118, 155, 0.5);
+    font-family: fantasy;
+}
+#days-worked-amount{
+    background: rgba(82, 118, 155, 0.5);
+    font-family: fantasy;
+}
+input[type="number" i] {
+    padding: 5px 13px;
+}
+.input-title {
+    border-bottom: -3px;
+    border-bottom: black solid 2px;
+}
+#days-worked-amount {
+    font-size: 30px;
+    margin-bottom: 1px;
+    width: 100px;
+    margin-left: 18%;
+    margin-top: 10px;
+}
+.input-box:focus{
+    outline-color: #1b81b1;
+}
+#paycheck-amount {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    width: 120px;
+}
+#hours-day-amount {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    width: 100px;
+    margin-left: 18%;
+}
+#pay-hour{
+ font-size: 25px;   
+}
+#pay-day{
+ font-size: 25px;    
+}
+#pay-weekly{
+ font-size: 25px;    
+}
+#pay-month{
+ font-size: 25px;    
+}
+#pay-yearly{
+ font-size: 25px;   
+}
+/*-------button-------*/
+#btn1:active{
+    border-bottom: grey solid 0.5px;
+    border-right: grey solid 0.5px;
+}
+#btn1:focus{
+    outline: none;
+}
+#btn1:hover{
+    transition: 0.1s;
+    width: 162px;
+    font-size: 32px;
+}
+.btn-cont{
+    padding-left: 642px;
+    padding-top: 25px;
+}
+#btn1 {
+    padding-top: 6px;
+    font-size: 30px;
+    color: black;
+    height: 50px;
+    width: 160px;
+    background-color: #1b81b1;
+    box-shadow: 2px 2px 4px 3px rgba(0,0,0,0.75);
+    font-family: fantasy;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+}
+/*-----left side------*/
+
+.left {
+    height: 450px;
+    display: grid;
+    grid-template-rows: 1.6fr 3fr;
+    border: black solid 2px;
+    border-radius: 2px;
+}
+.income-chart {
+    background-color:  #1b81b1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.boxes-top {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    padding: 35px;
+    font-family: fantasy;
+}
+.boxes-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: black solid 2px;
+    border-radius: 2px;
+    font-family: fantasy;
+    width: 250px;
+}
+#percent-tx{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+#tax-percent{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 25px;
+}
+.preview-calc{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.spacer{
+    background-color: white;
+    border-top: black solid 2px;
+}
+.preview-calc-info {
+    position: relative;
+    background: white;
+    border-top: black solid 2px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    padding-top: 30px;
+}
+.taxes-btn{
+    background-color: white;
+    border-top: black solid 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 94px;
+    padding-right: 110px;
+}
+.tax{
+    padding-top: 5px;
+    padding-left: 10px;
+    border-top: black solid 2px;
+}
+#btn-1:hover{
+    background-color: #37b6f1;
+}
+#btn-2:hover{
+    background-color:#37b6f1;
+}
+#btn-3:hover{
+    background-color: #37b6f1;
+}
+#btn-4:hover{
+    background-color: #37b6f1;
+}
+#btn-5:hover{
+    background-color:#37b6f1;
+}
+#paycheck-title{
+    padding-right: 10px;
+}
+
+/*-------Right Side------ */
+.right {
+    display: grid;
+    grid-template-rows: 1.65fr 3fr;
+}
+.btn-page {
+    border-right: solid black 2px;
+    border-top: solid black 2px;
+    background: #1b81b1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-family: fantasy;
+    
+}
+.savings-title {
+    padding-top: 30px;
+    padding-left: 38px;
+    font-size: 22px;
+}
+#savings-input {
+    font-size: 40px;
+    padding-left: 15px;
+    margin-bottom: 4px;
+}
+#savings-input::placeholder {
+    color: black;
+    font-family: fantasy;
+}
+.result-page {
+    background: white;
+    border-right: solid black 3px;
+    border-bottom: solid black 2px;
+    font-size: xxx-large;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    font-family: fantasy;
+}
+#total-tital {  
+    background: #1b81b1;
+    font-size: 25px;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+#total-amount {
+    padding-top: 84px;
+    padding-left: 136px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PayCheck Calculator</h1>
+        <div class="input-box-setter">
+            <div class="input-box">
+                <div class="input-title">Days Worked In 2 Weeks</div>
+                <input id="days-worked-amount" type="number">
+            </div>
+            <div class="input-box">
+                <div class="input-title">Paycheck Amount</div>
+                <input id="paycheck-amount" type="number" placeholder="$0.00" >
+            </div>
+            <div class="input-box">
+                <div class="input-title">Hour's Worked Per Day</div>
+                <input id="hours-day-amount" type="number">
+            </div>
+        </div>
+    </div>
+    <div class="btn-cont">
+        <button id="btn1">Calculate</button>
+    </div>
+    <div class="container">
+        <div class="bottom">
+            <div class="left">
+                <div class="income-chart">
+                    <div class="boxes-top">
+                        <div id="pay-hour">$0.00</div>
+                        <div id="pay-hour-title">Hourly</div>
+                    </div>
+                    <div class="boxes-top">
+                        <div id="pay-day">$0.00</div>
+                        <div id="pay-day-title">Dayly</div>
+                    </div>
+                    <div class="boxes-top">
+                        <div id="pay-weekly">$0.00</div>
+                        <div id="pay-weekly-title">Weekly</div>
+                    </div>
+                    <div class="boxes-top">
+                        <div id="pay-month">$0.00</div>
+                        <div id="pay-month-title">Monthly</div>
+                    </div>
+                    <div class="boxes-top">
+                        <div id="pay-yearly">$0.00</div>
+                        <div id="pay-yearly-title">Yearly</div>
+                    </div>
+                </div>
+                <div class="preview-calc">
+                    <div class="spacer"></div>
+                    <div class="preview-calc-info">
+                        <div class="boxes-bottom">
+                            <div id="paycheck-title">Paycheck</div>
+                            <div id="paycheck">$0.00</div>
+                        </div>
+                        <div class="boxes-bottom" id="percent-tx">
+                            <div id="paycheck-taxes-title">Taxes</div>
+                            <div id="paycheck-taxes">$0.00</div>
+                            <div id="tax-percent">10%</div>
+                        </div>
+                        <div class="boxes-bottom">
+                            <div id="paycheck-savings-title">Savings</div>
+                            <div id="paycheck-savings">$0.00</div>
+                        </div>
+                        <div class="boxes-bottom">
+                            <div id="total-title">Total</div>
+                            <div id="total">$0.00</div>
+                        </div>
+                    </div>
+
+                    <div class="taxes-btn">
+                        <div class="tax">
+                            <button id="btn-1">10%</button>
+                        </div>
+                        <div class="tax">
+                            <button id="btn-2">15%</button>
+                        </div>
+                        <div class="tax">
+                            <button id="btn-3">20%</button>
+                        </div>
+                        <div class="tax">
+                            <button id="btn-4">25%</button>
+                        </div>
+                        <div class="tax">
+                            <button id="btn-5">30%</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="right">
+                <div class="btn-page">
+                    <div class="savings-title">HOW MUCH DO YOU WANNA SAVE!</div>
+                    <input id="savings-input" type="number" placeholder="$0.00">
+                </div>
+                <div class="result-page">
+                    <div id="total-tital">TOTAL AMOUNT TO SPEND</div>
+                    <div id="total-amount">$0.00</div>
+                </div>
+            </div>
+        </div>
+    
+    
+    <script>
+        var controller = (function()
+{
+
+    //-------Strings---------
+
+    var DOM = 
+    {
+        hourly: "#pay-hour",
+        dayly: "#pay-day",
+        weekly: "#pay-weekly",
+        monthly: "#pay-month",
+        yearly: "#pay-yearly",
+        //
+        paycheck: "#paycheck",
+        taxes: "#paycheck-taxes",
+        savings: "#paycheck-savings",
+        total: "#total",
+        totalSpend: "#total-amount",
+        //
+        savingsBtn: "#savings-input",
+        paycheckInp: "#paycheck-amount",
+        //
+        daysWorked: "#days-worked-amount",
+        hoursWorked: "#hours-day-amount",
+        //
+
+
+        
+    //------Return-Strings-----
+    };
+
+    return{
+        returnDOM: function(){
+            return DOM;
+        }
+    }
+
+})();
+
+var payController = (function()
+{
+    var DOMS = controller.returnDOM();
+    var btn1,btn2,btn3,btn4,btn5,taxPer;
+
+    btn1 = document.querySelector("#btn-1");
+    btn2 = document.querySelector("#btn-2");
+    btn3 = document.querySelector("#btn-3");
+    btn4 = document.querySelector("#btn-4");
+    btn5 = document.querySelector("#btn-5");
+
+    taxPer = document.querySelector("#tax-percent");
+
+
+    document.querySelector("#btn-1").addEventListener("click", function(){
+        taxPer.innerHTML = "10" + "%";
+        btn1.style.backgroundColor = "#37b6f1";
+        btn2.style.backgroundColor = 'white';
+        btn3.style.backgroundColor = 'white';
+        btn4.style.backgroundColor = 'white';
+        btn5.style.backgroundColor = 'white';
+        document.querySelector(DOMS.taxes).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%",""))).toFixed(2);
+        document.querySelector(DOMS.total).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%","")))).toFixed(2);
+    });
+    document.querySelector("#btn-2").addEventListener("click", function(){
+        taxPer.innerHTML = "15" + "%";
+        btn2.style.backgroundColor = "#37b6f1";
+        btn1.style.backgroundColor = "white";
+        btn3.style.backgroundColor = 'white';
+        btn4.style.backgroundColor = 'white';
+        btn5.style.backgroundColor = 'white';
+        document.querySelector(DOMS.taxes).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%",""))).toFixed(2);
+        document.querySelector(DOMS.total).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%","")))).toFixed(2);
+    });
+    document.querySelector("#btn-3").addEventListener("click", function(){
+        taxPer.innerHTML = "20" + "%";
+        btn3.style.backgroundColor = "#37b6f1";
+        btn2.style.backgroundColor = 'white';
+        btn2.style.backgroundColor = 'white';
+        btn4.style.backgroundColor = 'white';
+        btn5.style.backgroundColor = 'white';
+        document.querySelector(DOMS.taxes).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%",""))).toFixed(2);
+        document.querySelector(DOMS.total).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%","")))).toFixed(2);
+    });
+    document.querySelector("#btn-4").addEventListener("click", function(){
+        taxPer.innerHTML = "25" + "%";
+        btn4.style.backgroundColor = "#37b6f1";
+        btn3.style.backgroundColor = 'white';
+        btn2.style.backgroundColor = 'white';
+        btn1.style.backgroundColor = 'white';
+        btn5.style.backgroundColor = 'white';
+        document.querySelector(DOMS.taxes).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%",""))).toFixed(2);
+        document.querySelector(DOMS.total).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%","")))).toFixed(2);
+    });
+    document.querySelector("#btn-5").addEventListener("click", function(){
+        taxPer.innerHTML = "30" + "%";
+        btn5.style.backgroundColor = "#37b6f1";
+        btn4.style.backgroundColor = 'white';
+        btn3.style.backgroundColor = 'white';
+        btn2.style.backgroundColor = 'white';
+        btn1.style.backgroundColor = 'white';
+        document.querySelector(DOMS.taxes).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%",""))).toFixed(2);
+        document.querySelector(DOMS.total).innerHTML = "$" + (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") * ("." + taxPer.innerHTML.replace("%","")))).toFixed(2);
+    });
+
+
+//---------Paycheck-Input-------
+    document.querySelector(DOMS.paycheckInp).addEventListener("input", function(inp){
+        var input = inp;
+            document.querySelector(DOMS.paycheck).innerHTML = "$" + input.target.value;
+            document.querySelector(DOMS.taxes).innerHTML = "$" + (inp.target.value * ("." + taxPer.innerHTML.replace("%",""))).toFixed(2);
+            document.querySelector(DOMS.total).innerHTML = "$" + (input.target.value - (inp.target.value * ("." + taxPer.innerHTML.replace("%","")))).toFixed(2);
+    });
+
+//---------Savings-Input--------
+    document.querySelector(DOMS.savingsBtn).addEventListener("input", function(inp)
+    {
+        var input = inp;
+            document.querySelector(DOMS.savings).innerHTML = "$" + input.target.value;
+    });
+
+})();
+
+var timeController = (function(cont)
+{
+    var DOMS = controller.returnDOM();
+
+    document.querySelector("#btn1").addEventListener("click", function()
+    {
+        var hourly = (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") / document.querySelector(DOMS.daysWorked).value / document.querySelector(DOMS.hoursWorked).value).toFixed(2);
+
+        //---------Rates------------
+        if(!document.querySelector(DOMS.daysWorked).value == "" && !document.querySelector(DOMS.hoursWorked).value == "" && !document.querySelector(DOMS.paycheckInp).value == "")
+        {
+            // ------Hourly--------
+            document.querySelector(DOMS.hourly).innerHTML = "$" + (hourly - (hourly * ("." + document.querySelector("#tax-percent").innerHTML.replace("%","")))).toFixed(2);
+            //------Dayly---------
+            document.querySelector(DOMS.dayly).innerHTML = "$" + (document.querySelector(DOMS.hourly).innerHTML.replace("$","") * document.querySelector(DOMS.hoursWorked).value).toFixed(2);
+            //------Weekly--------
+            document.querySelector(DOMS.weekly).innerHTML = "$" + ((document.querySelector(DOMS.daysWorked).value / 2) * document.querySelector(DOMS.dayly).innerHTML.replace("$","")).toFixed(2);
+            //------Monthly-------
+            document.querySelector(DOMS.monthly).innerHTML = "$" + (document.querySelector(DOMS.weekly).innerHTML.replace("$","") * 4).toFixed(2);
+            //------Yearly--------
+            document.querySelector(DOMS.yearly).innerHTML = "$" + (document.querySelector(DOMS.monthly).innerHTML.replace("$","") * 12).toFixed(2);
+
+            //---------------------
+
+            //-----Total----------
+            document.querySelector(DOMS.total).innerHTML = "$"+ (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - document.querySelector(DOMS.savings).innerHTML.replace("$","") - document.querySelector(DOMS.taxes).innerHTML.replace("$","")).toFixed(2);
+            document.querySelector(DOMS.totalSpend).innerHTML = "$"+ (document.querySelector(DOMS.paycheck).innerHTML.replace("$","") - document.querySelector(DOMS.savings).innerHTML.replace("$","") - document.querySelector(DOMS.taxes).innerHTML.replace("$","")).toFixed(2);
+        };
+    });
+})(payController);
+    </script>
+</body>
+</html>

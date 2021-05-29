@@ -56,6 +56,10 @@ router.get('/employeedash', (req, res) =>{res.render('./employeedash')
 router.get('/profile', (req, res) =>{res.render('./employeeprofile')
 } );
 
+//employee paycheck
+router.get('/paycheck', (req, res) =>{res.render('./paycheck')
+} );
+
 
 
 
