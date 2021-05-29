@@ -44,6 +44,16 @@ router.get('/ratingsystem', (req, res) =>{res.render('./ratingsystem')
 router.get('/contactus', (req, res) =>{res.render('./contactus')
 } );
 
+//employee login
+router.get('/employeelogin', (req, res) =>{res.render('./employeelogin')
+} );
+
+//employee dash
+router.get('/employeedash', (req, res) =>{res.render('./employeedash')
+} );
+
+
+
 
 module.exports = router
 

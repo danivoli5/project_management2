@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Employee Profile </title>
+
+    <style>
+      body{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 700px;
+}
+
+form {
+    width: 700px;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border: 2px solid lightsteelblue;
+}   
+
+.wraper{
+    width:500px;
+}
+input {
+    width: 65%;
+    margin: 10px;
+    padding: 5px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    -webkit-transition: 
+        border-color .15s ease-in-out,
+        -webkit-box-shadow .15s ease-in-out;
+    transition: 
+        border-color .15s ease-in-out,
+        -webkit-box-shadow .15s ease-in-out;
+    -o-transition: 
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+    transition: 
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+    transition: 
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out,
+        -webkit-box-shadow .15s ease-in-out;
+}
+label {
+    width: 25%;
+    display: inline-block;
+    color: navy; 
+}
+
+input[type=submit] {
+    border: 2px solid navy;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+}
+
+#profile {
+    width: 700px;
+    font-size: 20px;
+    margin-left: 100px;
+    border: 1px solid lightblue;
+    background-color: rgb(222, 238, 239);
+}
+.download {
+    margin-left: 100px;
+    padding: 10px;
+    border: 2px solid navy;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: ghostwhite;
+}
+.link {
+    text-decoration: none;
+    color: navy;
+}
+
+@media print {
+
+    @page:right{ 
+    @bottom-left {
+             margin: 10pt 0 30pt 0;
+        }
+    }
+  
+    #profile {
+    page-break-inside: avoid;
+    width: 100%;
+    border-color: white;
+    font-size: 26pt;
+    }
+
+    .download {
+        visibility: hidden;
+    }
+}
+    </style>
+</head>
+<body>
+        <form enctype="multipart/form-data" method="post">
+            <div class="wrapper">
+                    <label for="input-FName">First name</label>
+                    <input id="input-FName" type="text" placeholder="Enter your first name">
+            </div>
+            
+            <div class="wrapper">
+                <label for="input-LName">Last name</label>
+                <input id="input-LName" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="wrapper">
+                <label for="input-patronim">Patronim</label>
+                <input id = "input-patronim" type="text" placeholder="Enter your patronim">
+            </div>
+            <div class="wrapper">
+                
+                <label for="univercity">Univercity</label>
+                <input id = "university" type="text" placeholder="University">  
+            </div>
+            <div class="wrapper">
+                    <label for="facultet">Facultet</label>
+                    <input id = "facultet" type="text" placeholder="Facultet">
+            </div> 
+             <div class="wrapper">
+                    <label for="specialization">Specialization</label>
+                    <input id = "specialization" type="text" placeholder="Specialization">
+            </div>
+            <div class="wrapper">
+                    <label for="graduate-year">Graduate year</label>
+                    <input id = "graduate-year" type="date" placeholder="Graduate year">
+            </div>
+            <div class="wrapper">
+                    <label for="phone">Phone number</label>
+                    <input id="phone" type="number" placeholder="Phone number">
+            </div>
+            <div class="wrapper">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="wrapper">
+                    <label for="contacts">Other contact information</label>
+                    <input type="text" placeholder="Other contacts">
+            </div>
+            <div class="wrapper">
+                    <label for="photo">Add your photo</label>
+                    <input type="file" id="photo">
+            </div>
+
+            <input id = "submit" type="submit" value="Submit">
+        </form>
+
+        <div class="list"></div>
+
+    <script>
+      let inputs = document.querySelectorAll('input');
+let form = document.querySelector('form');
+let list = document.querySelector('.list');
+
+
+
+function render() {
+    form.style.display = 'none'; 
+    list.innerHTML = '';
+    let ol = document.createElement('ol');
+    list.appendChild(ol);
+    ol.id = 'profile';
+    let values = Array.from(inputs).map((el) => {
+      return el.value.trim();
+    })
+    values.pop();
+    values.forEach(el => {
+      let li = document.createElement('li');
+      li.innerHTML = el;
+      li.style.color = 'navy';
+      li.style.padding = '15px';
+      ol.appendChild(li);
+    })
+    let photo = document.getElementById('photo').files[0];
+    let promise = loadPhoto(photo);
+    promise.then (img => {
+        ol.lastChild.innerHTML ="";
+        ol.lastChild.appendChild(img);
+      }, () => {});
+
+    let download = document.createElement('button');
+    let a = document.createElement('a')
+    download.appendChild(a);
+    a.innerText = 'Download';
+    download.classList.add('download')
+    a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent( getData(values));
+    a.classList.add('link');
+    a.setAttribute('download', 'profile.json');
+    list.appendChild(download);
+    download.addEventListener('click', () => {
+      a.click()
+    })
+    
+
+}
+
+function loadPhoto (photo) {
+  let promise = new Promise ((resolve,reject) => {
+    try {
+      let reader = new FileReader();
+      reader.readAsDataURL(photo);
+      reader.addEventListener('load', e => {
+        let image = new Image();
+        image.src = e.target.result;
+        image.addEventListener('load', () => {
+          let img = document.createElement('img')
+          img.src = image.src;
+          img.style.width = '500px';
+          resolve(img)
+        })
+      })
+    } catch (error) {
+      reject(error);
+    }
+  })
+  return promise;
+}
+
+
+form.addEventListener('submit', (e) => { 
+  e.preventDefault();
+  render();
+  form.reset();
+})
+
+function getData(values) {
+  let info = {
+    firstName: values[0],
+    lastName: values[1],
+    patronym: values[2],
+    univercity: values[3],
+    facultet: values[4],
+    specialization: values[5],
+    graduateYear: values[6],
+    phone: values[7],
+    email: values[8],
+    otherContacts: values[9],
+    photo: values[10],
+  }
+  return JSON.stringify(info);
+}
+    </script>
+</body>
+</html>
