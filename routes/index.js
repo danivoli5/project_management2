@@ -52,6 +52,10 @@ router.get('/employeelogin', (req, res) =>{res.render('./employeelogin')
 router.get('/employeedash', (req, res) =>{res.render('./employeedash')
 } );
 
+//employee profile
+router.get('/profile', (req, res) =>{res.render('./employeeprofile')
+} );
+
 
 
 
